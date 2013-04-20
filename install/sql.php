@@ -240,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `xe_switchboard` (
   PRIMARY KEY (`SwitchID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (1, "public_enabled", "1");
+INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (1, "public_enabled", "0");
 INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (2, "public_closed_message", "");
 INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (3, "public_announcement_enabled", "0");
 INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (4, "public_announcement", "");
