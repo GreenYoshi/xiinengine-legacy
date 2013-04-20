@@ -12,7 +12,7 @@
  * @since v1.2
  */
 $footerQuery = "SELECT PageTitle, PagePretty "
-        . "FROM xe_pages "
+        . "FROM XE_Pages "
         . "WHERE PageFooterNav = 1 "
         . "AND PagePublished = 1";
 $footerItems = $this->database->query($footerQuery) or die($this->database->error);
