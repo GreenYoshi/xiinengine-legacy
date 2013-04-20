@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `XE_Ncategories`
+-- Tabellstruktur `XE_NCategories`
 --
 
-DROP TABLE IF EXISTS `XE_Ncategories`;
-CREATE TABLE IF NOT EXISTS `XE_Ncategories` (
+DROP TABLE IF EXISTS `XE_NCategories`;
+CREATE TABLE IF NOT EXISTS `XE_NCategories` (
   `NCatID` int(11) NOT NULL AUTO_INCREMENT,
   `NCatName` varchar(50) NOT NULL,
   `NCatPretty` varchar(50) NOT NULL,
@@ -44,11 +44,11 @@ CREATE TABLE IF NOT EXISTS `XE_Ncategories` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `XE_Ncomments`
+-- Tabellstruktur `XE_NComments`
 --
 
-DROP TABLE IF EXISTS `XE_Ncomments`;
-CREATE TABLE IF NOT EXISTS `XE_Ncomments` (
+DROP TABLE IF EXISTS `XE_NComments`;
+CREATE TABLE IF NOT EXISTS `XE_NComments` (
   `CommentID` int(11) NOT NULL AUTO_INCREMENT,
   `NewsID` int(11) NOT NULL,
   `PPLID` int(11) DEFAULT NULL,

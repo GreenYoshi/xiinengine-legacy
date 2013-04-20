@@ -9,7 +9,7 @@ function generateFile($fileUrl,$fileContent) {
 function generateAutoPage($db,$pageName) {
     switch($pageName) {
         case 'about':
-            $sqlQuery = 'INSERT INTO `xe_pages`(`PageTitle`, `PagePretty`, `PageDate`, `PageContent`, `PageHeaderNav`, `PageFooterNav`, `PagePublished`, `PageTags`) '
+            $sqlQuery = 'INSERT INTO `XE_Pages`(`PageTitle`, `PagePretty`, `PageDate`, `PageContent`, `PageHeaderNav`, `PageFooterNav`, `PagePublished`, `PageTags`) '
             .'VALUES ("About","about","'.date('Y-m-d H:i:s').'","XiinEngine Copyright Xiin Networks '.date('Y').'",0,1,1,"about")';
             break;
         case 'legal':
@@ -22,7 +22,7 @@ The above copyright notice and this permission notice shall be included in all c
 <br />
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<br />
 ');
-            $sqlQuery = 'INSERT INTO `xe_pages`(`PageTitle`, `PagePretty`, `PageDate`, `PageContent`, `PageHeaderNav`, `PageFooterNav`, `PagePublished`, `PageTags`) '
+            $sqlQuery = 'INSERT INTO `XE_Pages`(`PageTitle`, `PagePretty`, `PageDate`, `PageContent`, `PageHeaderNav`, `PageFooterNav`, `PagePublished`, `PageTags`) '
             .'VALUES ("Legal","legal","'.date('Y-m-d H:i:s').'","'.$copyright.'",0,1,1,"legal")';
             break;
         default:
