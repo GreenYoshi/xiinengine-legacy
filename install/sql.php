@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `xe_ncategories`
+-- Tabellstruktur `XE_Ncategories`
 --
 
-DROP TABLE IF EXISTS `xe_ncategories`;
-CREATE TABLE IF NOT EXISTS `xe_ncategories` (
+DROP TABLE IF EXISTS `XE_Ncategories`;
+CREATE TABLE IF NOT EXISTS `XE_Ncategories` (
   `NCatID` int(11) NOT NULL AUTO_INCREMENT,
   `NCatName` varchar(50) NOT NULL,
   `NCatPretty` varchar(50) NOT NULL,
@@ -44,11 +44,11 @@ CREATE TABLE IF NOT EXISTS `xe_ncategories` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `xe_ncomments`
+-- Tabellstruktur `XE_Ncomments`
 --
 
-DROP TABLE IF EXISTS `xe_ncomments`;
-CREATE TABLE IF NOT EXISTS `xe_ncomments` (
+DROP TABLE IF EXISTS `XE_Ncomments`;
+CREATE TABLE IF NOT EXISTS `XE_Ncomments` (
   `CommentID` int(11) NOT NULL AUTO_INCREMENT,
   `NewsID` int(11) NOT NULL,
   `PPLID` int(11) DEFAULT NULL,
@@ -67,11 +67,11 @@ CREATE TABLE IF NOT EXISTS `xe_ncomments` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `xe_news`
+-- Tabellstruktur `XE_News`
 --
 
-DROP TABLE IF EXISTS `xe_news`;
-CREATE TABLE IF NOT EXISTS `xe_news` (
+DROP TABLE IF EXISTS `XE_News`;
+CREATE TABLE IF NOT EXISTS `XE_News` (
   `NewsID` int(11) NOT NULL AUTO_INCREMENT,
   `NewsTitle` varchar(50) NOT NULL,
   `NewsPretty` varchar(50) NOT NULL,
@@ -89,11 +89,11 @@ CREATE TABLE IF NOT EXISTS `xe_news` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `xe_news_author`
+-- Tabellstruktur `XE_News_Author`
 --
 
-DROP TABLE IF EXISTS `xe_news_author`;
-CREATE TABLE IF NOT EXISTS `xe_news_author` (
+DROP TABLE IF EXISTS `XE_News_Author`;
+CREATE TABLE IF NOT EXISTS `XE_News_Author` (
   `NewsID` int(11) NOT NULL,
   `PPLID` int(11) NOT NULL,
   KEY `NewsID` (`NewsID`),
@@ -103,11 +103,11 @@ CREATE TABLE IF NOT EXISTS `xe_news_author` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `xe_news_categories`
+-- Tabellstruktur `XE_News_Categories`
 --
 
-DROP TABLE IF EXISTS `xe_news_categories`;
-CREATE TABLE IF NOT EXISTS `xe_news_categories` (
+DROP TABLE IF EXISTS `XE_News_Categories`;
+CREATE TABLE IF NOT EXISTS `XE_News_Categories` (
   `NewsID` int(11) NOT NULL,
   `NCatID` int(11) NOT NULL,
   KEY `NewsID` (`NewsID`),
@@ -117,29 +117,29 @@ CREATE TABLE IF NOT EXISTS `xe_news_categories` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `xe_permissions`
+-- Tabellstruktur `XE_Permissions`
 --
 
-DROP TABLE IF EXISTS `xe_permissions`;
-CREATE TABLE IF NOT EXISTS `xe_permissions` (
+DROP TABLE IF EXISTS `XE_Permissions`;
+CREATE TABLE IF NOT EXISTS `XE_Permissions` (
   `PermID` int(11) NOT NULL AUTO_INCREMENT,
   `PermAccessName` varchar(32) NOT NULL,
   `PermHexColor` varchar(8) NOT NULL,
   PRIMARY KEY (`PermID`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0 ;
 
-INSERT INTO `xe_permissions` (`PermID`, `PermAccessName`, `PermHexColor`) VALUES (1, "ROOT", "#000000");
-INSERT INTO `xe_permissions` (`PermID`, `PermAccessName`, `PermHexColor`) VALUES (2, "Administrator", "#000000");
+INSERT INTO `XE_Permissions` (`PermID`, `PermAccessName`, `PermHexColor`) VALUES (1, "ROOT", "#000000");
+INSERT INTO `XE_Permissions` (`PermID`, `PermAccessName`, `PermHexColor`) VALUES (2, "Administrator", "#000000");
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `xe_pages`
+-- Tabellstruktur `XE_Pages`
 --
 
-DROP TABLE IF EXISTS `xe_pages`;
-CREATE TABLE IF NOT EXISTS `xe_pages` (
+DROP TABLE IF EXISTS `XE_Pages`;
+CREATE TABLE IF NOT EXISTS `XE_Pages` (
   `PageID` int(11) NOT NULL AUTO_INCREMENT,
   `PageTitle` varchar(50) NOT NULL,
   `PagePretty` varchar(50) NOT NULL,
@@ -157,11 +157,11 @@ CREATE TABLE IF NOT EXISTS `xe_pages` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `xe_ppl`
+-- Tabellstruktur `XE_PPL`
 --
 
-DROP TABLE IF EXISTS `xe_ppl`;
-CREATE TABLE IF NOT EXISTS `xe_ppl` (
+DROP TABLE IF EXISTS `XE_PPL`;
+CREATE TABLE IF NOT EXISTS `XE_PPL` (
   `PPLID` int(11) NOT NULL AUTO_INCREMENT,
   `PPLAlias` varchar(20) NOT NULL,
   `PPLEmail` varchar(50) NOT NULL,
@@ -185,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `xe_ppl` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0 ;
 
 -- The password generated is "xiinengine" with the default salts ("Changeme1", "Changeme2")
-INSERT INTO  `xe_ppl` (
+INSERT INTO  `XE_PPL` (
 `PPLID` ,
 `PPLAlias` ,
 `PPLEmail` ,
@@ -212,44 +212,44 @@ VALUES (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `xe_ppl_permissions`
+-- Tabellstruktur `XE_PPL_Permissions`
 --
 
-DROP TABLE IF EXISTS `xe_ppl_permissions`;
-CREATE TABLE IF NOT EXISTS `xe_ppl_permissions` (
+DROP TABLE IF EXISTS `XE_PPL_Permissions`;
+CREATE TABLE IF NOT EXISTS `XE_PPL_Permissions` (
   `PPLID` int(11) NOT NULL,
   `PermID` int(11) NOT NULL,
   KEY `PPLID` (`PPLID`),
   KEY `PermID` (`PermID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `xe_ppl_permissions` (`PPLID`, `PermID`) VALUES (1, 1);
-INSERT INTO `xe_ppl_permissions` (`PPLID`, `PermID`) VALUES (1, 2);
+INSERT INTO `XE_PPL_Permissions` (`PPLID`, `PermID`) VALUES (1, 1);
+INSERT INTO `XE_PPL_Permissions` (`PPLID`, `PermID`) VALUES (1, 2);
 
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `xe_switchboard`
+-- Tabellstruktur `XE_Switchboard`
 --
 
-DROP TABLE IF EXISTS `xe_switchboard`;
-CREATE TABLE IF NOT EXISTS `xe_switchboard` (
+DROP TABLE IF EXISTS `XE_Switchboard`;
+CREATE TABLE IF NOT EXISTS `XE_Switchboard` (
   `SwitchID` int(11) NOT NULL AUTO_INCREMENT,
   `SwitchName` varchar(50) NOT NULL,
   `SwitchValue` varchar(150) NOT NULL,
   PRIMARY KEY (`SwitchID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (1, "public_enabled", "0");
-INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (2, "public_closed_message", "");
-INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (3, "public_announcement_enabled", "0");
-INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (4, "public_announcement", "");
-INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (5, "site_name", "'.$installVars['XE_SITE_NAME'].'");
-INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (6, "site_description", "'.$installVars['XE_SITE_DESCRIPTION'].'");
-INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (7, "public_site_tags", "xiin, networks, engine, xiin engine, cms");
-INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (8, "public_site_theme", "'.$installVars['XE_THEME_SELECT'].'");
--- INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (9, "base_site_url", "http://sandbox.xiinet.com/");
--- INSERT INTO `xe_switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (10, "base_site_url_offset", "xe1/");
+INSERT INTO `XE_Switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (1, "public_enabled", "0");
+INSERT INTO `XE_Switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (2, "public_closed_message", "");
+INSERT INTO `XE_Switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (3, "public_announcement_enabled", "0");
+INSERT INTO `XE_Switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (4, "public_announcement", "");
+INSERT INTO `XE_Switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (5, "site_name", "'.$installVars['XE_SITE_NAME'].'");
+INSERT INTO `XE_Switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (6, "site_description", "'.$installVars['XE_SITE_DESCRIPTION'].'");
+INSERT INTO `XE_Switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (7, "public_site_tags", "xiin, networks, engine, xiin engine, cms");
+INSERT INTO `XE_Switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (8, "public_site_theme", "'.$installVars['XE_THEME_SELECT'].'");
+-- INSERT INTO `XE_Switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (9, "base_site_url", "http://sandbox.xiinet.com/");
+-- INSERT INTO `XE_Switchboard` (`SwitchID`, `SwitchName`, `SwitchValue`) VALUES (10, "base_site_url_offset", "xe1/");
 
 -- --------------------------------------------------------
 
