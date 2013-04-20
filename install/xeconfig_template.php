@@ -22,7 +22,6 @@ return "<?php
     define('XE_DB_USER', '".$installVars['XE_DB_USER']."');
     define('XE_DB_PASS', '".$installVars['XE_DB_PASS']."');
     define('XE_DB_NAME', '".$installVars['XE_DB_NAME']."');
-?>    
 ";
 }
     
