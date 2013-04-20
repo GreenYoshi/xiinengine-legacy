@@ -1,0 +1,14 @@
+#
+#   .htaccess
+#
+
+    RewriteEngine On
+	
+    ##             \/ Should be current subdirectory proportional to the (sub)domain root
+    RewriteBase /xe1/admin/
+# File exist?  
+    RewriteCond %{SCRIPT_FILENAME} !-f
+# Directory exists?
+    RewriteCond %{SCRIPT_FILENAME} !-d
+# If not, rewrite
+    RewriteRule (.*) index.php?q=$1 [QSA,L]

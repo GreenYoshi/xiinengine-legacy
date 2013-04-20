@@ -1,0 +1,93 @@
+/**
+ * XiinEngine
+ *
+   * * XiinEngine is supplied under the MIT license. Please read license.md  in the root directory
+ *
+ * @package XiinEngine Legacy
+ * @author Philip Whitehall <philip.whitehall@xiinet.com> 
+ * @author Ian Karlsson <ian.karlsson@xiinet.com>
+ * @copyright Copyright 2006-2013 Xiin Networks <http://xiinet.com/>
+ * @link http://xiinengine.com/
+ * @since v1.2install_step_instruction
+ * 
+ * XiinEngine Installer Theme
+ * PLEASE DELETE THIS ENTIRE DIRECTORY AFTER SETUP
+*/
+
+html { height: 100%; margin: 0; padding: 0; }
+body.xepublic{
+    background-color: #202020;
+    font-family: Verdana, Geneva, sans-serif;
+    color:#ffffff;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+a:link { color: #202020; text-decoration: none; }
+a:visited { color: #202020; text-decoration: none; }
+a:active { color: #202020; text-decoration: none; }
+a:hover { color: #767676; text-decoration: none; }
+
+.install_logo {
+    border: 0;
+    width: 197px;
+    margin: 16px auto 0 auto;
+}
+
+.install_title {
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
+    margin: 16px 0;
+}
+
+.install_page_content_outer {
+    width: 980px;
+    margin: 0 auto 100px auto;
+    background-color: #ffffff;
+    color: #202020;
+}
+
+.install_page_content_inner {
+    padding: 10px;
+}
+
+.install_page_content_outer a:link { color: #9d0000; text-decoration: none; }
+.install_page_content_outer a:visited { color: #9d0000; text-decoration: none; }
+.install_page_content_outer a:active { color: #9d0000; text-decoration: none; }
+.install_page_content_outer a:hover { color: #404040; text-decoration: none; }
+
+.install_delete {
+    color: #e50000;
+    font-weight: bold;
+}
+
+.install_step {
+    width: 100%;
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #202020;
+}
+
+.install_step_instruction {
+    width: 100%;
+    font-size: 16px;
+    margin: 10px 0px;
+    font-style: italic;
+}
+
+.install_table {
+    width: 100%;
+    border: 0;
+    margin: 10px 0px;
+}
+
+.install_footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
