@@ -11,6 +11,7 @@ XiinEngine is aimed for beginner to mid-level web developers who are comfortable
 
 The basics of the website will work after running the installer (instructions below). However, we believe the code base is easy to understand that you will want to create your own modules on top of the existing code (such as the examples above).
 
+XiinEngine 1 has been tested and should work on at least PHP 5.2 and MySQL 5.0.
 
 XE1 Setup Checklist
 ------------------------
