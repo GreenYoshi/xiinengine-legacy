@@ -33,6 +33,18 @@ To get started with XE, follow these steps:
 
 *  Should you wish to open the doors immediately, turn off debug and maintenance mode in `index.php` and `/admin/index.php` (change `sysDebugMode` and `sysMaintenanceMode` to `false`). Additionally for the public site's `index.php`, turn `sysClosedSite` to false. Please also set "Public Site Enabled" in the system setting in the AdminCP
 
+*  Remember to delete the entirety of the `/install` folder
+
+Re-install XE1
+------------------------
+
+If for any reason you need to re-install XE1 afresh, the minimum requirement for the core files to reset are to:
+
+*  Delete the `/config/sec_scr.php`, `/config/xeconfig.php`, `/admin/config/sec_scr.php` and `/admin/config/xeconfig.php` files
+
+*  Re-upload the `/install` folder back in its original place (because you deleted it when you installed the first time for security reasons, right?)
+
+*  Follow the main setup guide again
 
 Development Basics
 ---------------------------
