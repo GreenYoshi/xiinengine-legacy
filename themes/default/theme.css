@@ -3,7 +3,7 @@
   Copyright 2013 Xiin Networks. All rights reserved.
   Authors:
           Philip Whitehall (philip.whitehall@xiinet.com)
-		  Ian Karlsson (ian.karlsson@xiinet.com)
+                  Ian Karlsson (ian.karlsson@xiinet.com)
 */
 html { height: 100%; margin: 0; padding: 0; }
 body.xepublic{
@@ -31,10 +31,10 @@ a:hover { color: #767676; text-decoration: none; }
 }
 
 .xe_debug {
-	width: 100%;
-	background-color: #a60000;
-	color: #ffffff;
-	text-align: center;
+    width: 100%;
+    background-color: #a60000;
+    color: #ffffff;
+    text-align: center;
 }
 
 /* HEADER */
@@ -66,7 +66,7 @@ a:hover { color: #767676; text-decoration: none; }
 
 .header_nav_container {
     background-color: #f0f0f0;
-	color: #202020;
+    color: #202020;
     width: 980px;
     height: 40px;
     position: relative;
@@ -85,7 +85,7 @@ a:hover { color: #767676; text-decoration: none; }
     -moz-box-sizing: border-box;    
     box-sizing: border-box;
     font-size: 16px;
-	font-weight:bold;
+    font-weight:bold;
     position: absolute;
     bottom: 12px;
     left: 16px;
@@ -205,7 +205,7 @@ a:hover { color: #767676; text-decoration: none; }
     width: 980px;
     min-height: 300px;
     margin: 10px auto;
-	color: #202020;
+    color: #202020;
 }
 
 .body_other_random_outer {
@@ -349,5 +349,65 @@ a:hover { color: #767676; text-decoration: none; }
     margin: 2px 2px;
     disply: block;
 }
+
+/* User forms */
+.user_form_outer {
+    width: 100%;
+    background-color: #f0f0f0;
+}
+.user_form_inner {
+    padding: 10px;
+    font-size: 12px;
+}
+.user_form_header_notice {
+    font-size: 18px;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0; 
+}
+.result_label {
+    padding: 4px 8px;
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 2px solid #f0f0f0;
+}
+.result_help {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+}
+.add_textfield {
+    background-color: #202020;
+    color: #ffffff;
+    padding: 3px 4px;
+    margin: 3px;
+}
+.add_textfield:hover {
+    background-color: #ffffff;
+    color: #202020;
+}
+.result_editor_text {
+    border-bottom: 2px solid #f0f0f0;
+}
+.result_nav_left {
+    padding: 4px 8px;
+}
+.result_button {
+    display: inline-block;
+    font-weight: bold;
+    color: #ffffff;
+}
+.submit {
+    border: 0px;
+    background-color: #202020;
+    padding: 8px;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+.submit:link { color: #ffffff; text-decoration: none; }
+.submit:visited { color: #ffffff; text-decoration: none; }
+.submit:active { color: #ffffff; text-decoration: none; }
+.submit:hover { color: #202020; background-color: #ffffff; text-decoration: none; }
 
 /* 3RD PARTY DUMP */

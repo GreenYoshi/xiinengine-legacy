@@ -36,18 +36,18 @@ $error = "No errors occurred";
 // Generate Activation Key
 $rememberPassKey = hash("sha512", XE_SALT_L . $mailto['PPLEmail'] . date("H:jYU") . XE_SALT_R);
 
-$subject = 'XiinEngine Account Reset';
+$subject = XE_SITE_NAME.' Account Reset';
 
 $body = 'Dear ' . $mailto['PPLFName'] . ' ' . $mailto['PPLSName'] . ',
-Your password has been reset on XiinEngine. Please click the link below to set a new password:
+Your password has been reset on '.XE_SITE_NAME.'. Please click the link below to set a new password:
 
-http://'.$mailURL.'.com/activate/' . $rememberPassKey . '
+http://'.$mailURL.'/activate/' . $rememberPassKey . '
 
 If you cannot click it, copy paste it into a web browser. Hope to see you online soon!
 
 Kind regards,
 
-XiinEngine Team';
+'.XE_SITE_NAME.' Team';
 
 $email = 'no-reply@'.$mailURL;
 
@@ -66,7 +66,6 @@ if ($debug) {
     } else {
         mail($mailto['PPLEmail'], $subject, $body, "From:" . $email);
         $this->database->query("UPDATE XE_PPL SET PPLRememberPassKey = '" . $rememberPassKey . "' WHERE PPLPretty = '" . $pplPretty . "'") or die($this->database->error);
-        //mail("admin@xiinet.com",$subject,$body,'From:'.$email);
         header("location:" . sysBaseURL . "/ppl");
     }
 }
