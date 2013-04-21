@@ -15,7 +15,7 @@
 	
 ?>
 
-<div class="result_button add"><a href="<?php echo sysBaseURL; ?>/articles/" target="_self">Return</a></div><br />
+<div class="result_button add"><a href="<?php echo sysBaseURL; ?>/staticpages/" target="_self">Return</a></div><br />
 
 <?php 
 $this->titleData = "View Mode - Pages Administration";
