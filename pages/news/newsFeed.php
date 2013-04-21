@@ -93,7 +93,7 @@ $newsresult = $this->database->query($newsquery) or die(mysql_error());
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> ';
         echo '<div class="news_content_outer">' . $newsOut . '</div>';
         echo '<g:plusone href="' . $socialLink . '"></g:plusone>';
-        if (empty(XiinEngine::$input[1])) {
+        if ($singlepost == false) {
             echo '<div class="news_view_button_outer"><a href="' . sysBaseURL . "/news/" . $news['NewsPretty'] . '" target="_self">READ IN FULL</a></div>';
         }
         echo '<div class="xe_clear"></div>';
