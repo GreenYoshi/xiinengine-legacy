@@ -23,7 +23,6 @@ if (!in_array("Administrator",XiinEngine::$user->PermArray) && !in_array("ROOT",
 <div class="result_button cancel"><a href="<?php echo sysBaseURL; ?>/ppl/" target="_self">Cancel</a></div>
 
 <?php 
-$this->titleData = "This is a test title";
 $this->pageScripts = "";
 // Security measures here when needed
 $pplPretty = substr(XiinEngine::$input[2],0,50);
@@ -31,6 +30,8 @@ $pplPretty = substr(XiinEngine::$input[2],0,50);
 $pplquery = "SELECT * FROM XE_PPL WHERE PPLPretty = '".$pplPretty."'";
 $dbresult = $this->database->query($pplquery) or die($this->database->error);
 $ppl = $dbresult->fetch_assoc();
+
+$this->titleData = "Editing PPL - " . stripslashes($ppl["PPLAlias"]);
 
 $this->generateEditForm($ppl,$pplPretty);
 
