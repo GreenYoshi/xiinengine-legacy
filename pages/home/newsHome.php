@@ -20,7 +20,7 @@ $totalPosts = $array[0];
 $newsquery = "SELECT NewsID, NewsTitle, NewsDate, NewsHighlight, NewsPublished, NewsContent, NewsPretty "
 			."FROM `XE_News` "
 			."WHERE NewsPublished = 1 "
-			."ORDER BY NewsID DESC LIMIT 5";
+			."ORDER BY NewsDate DESC LIMIT 5";
 
 $newsresult = $this->database->query($newsquery) or die(mysql_error());
 

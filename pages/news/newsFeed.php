@@ -29,19 +29,19 @@ if (!empty(XiinEngine::$input[1]) && is_numeric(XiinEngine::$input[1])) {
     $newsquery = "SELECT NewsID, NewsTitle, NewsDate, NewsHighlight, NewsPublished, NewsContent, NewsPretty "
             . "FROM `XE_News` "
             . "WHERE NewsPublished = 1 "
-            . "ORDER BY NewsID DESC LIMIT 5 OFFSET $listOffset";
+            . "ORDER BY NewsDate DESC LIMIT 5 OFFSET $listOffset";
 } else if (!empty(XiinEngine::$input[1])) {
     $newsquery = "SELECT NewsID, NewsTitle, NewsDate, NewsHighlight, NewsPublished, NewsContent, NewsPretty "
             . "FROM `XE_News` "
             . "WHERE NewsPublished = 1 "
             . "AND NewsPretty = '" . $this->database->real_escape_string(XiinEngine::$input[1]) . "' "
-            . "ORDER BY NewsID DESC LIMIT 1";
+            . "ORDER BY NewsDate DESC LIMIT 1";
     $singlepost = true;
 } else {
     $newsquery = "SELECT NewsID, NewsTitle, NewsDate, NewsHighlight, NewsPublished, NewsContent, NewsPretty "
             . "FROM `XE_News` "
             . "WHERE NewsPublished = 1 "
-            . "ORDER BY NewsID DESC LIMIT 5";
+            . "ORDER BY NewsDate DESC LIMIT 5";
 }
 
 $newsresult = $this->database->query($newsquery) or die(mysql_error());
