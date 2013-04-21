@@ -280,7 +280,7 @@ a:hover { color: #767676; text-decoration: none; }
 .news_content_outer a:link { color: #3eca40; text-decoration: none; }
 .news_content_outer a:visited { color: #3eca40; text-decoration: none; }
 .news_content_outer a:active { color: #3eca40; text-decoration: none; }
-.news_content_outer a:hover { color: #f0f0f0; }
+.news_content_outer a:hover { color: #202020; }
 .news_content_outer:after {
     clear: both;
 }

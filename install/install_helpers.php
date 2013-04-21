@@ -19,10 +19,10 @@ $copyright = $db->real_escape_string('
 XiinEngine&rsquo;s code base is a collaboration between:<br />
 <br />
 <ul>
-    <li>Philip Whitehall <philip.whitehall@xiinet.com></li>
-    <li>Ian Karlsson <ian.karlsson@xiinet.com></li>
-    <li>Luuk Lenders <luuk.lenders@xiinet.com></li>
-    <li>James Mayell <james.mayell@xiinet.com></li>
+    <li>Philip Whitehall</li>
+    <li>Ian Karlsson</li>
+    <li>Luuk Lenders</li>
+    <li>James Mayell</li>
 </ul>
 <br />
 <a href="http://htmlpurifier.org/" target="_blank">HTML Purifier</a> and <a href="http://www.tinymce.com/" target="_blank">tinyMCE</a> are sub-components used in XiinEngine, and are both published under the <a href="http://www.gnu.org/licenses/lgpl-2.1.html" target="_blank">LGPL v 2.1+</a> license.<br />

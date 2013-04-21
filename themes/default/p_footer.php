@@ -24,7 +24,7 @@ $footerItems = $this->database->query($footerQuery) or die($this->database->erro
         if (!$firstItem)
             echo ' | ';
 
-        echo '<a href="' . sysBaseURL . '/' . $item['PagePretty'] . '" target="_self">' . $item['PageTitle'] . '</a>';
+        echo '<a href="' . sysBaseURL . '/' . stripslashes($item['PagePretty']) . '" target="_self">' . stripslashes($item['PageTitle']) . '</a>';
         $firstItem = false;
     }
     ?>
