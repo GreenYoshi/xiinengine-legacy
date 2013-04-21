@@ -67,5 +67,11 @@ Add these to the database as necessary. Remember to add your primary key and any
 
 <p>The promotions boxes and sidebar are currently operated manually. If you wish to show data in these boxes which come from the database, you should be able to make all your calls via $this->database without having to make a new MySQLi connection, as this has already been established by this stage.</p>
 
+<h2>Working with Permissions</h2>
+
+<p>As a security measure, there are different levels of permissions. The two which come with XE by default are `ROOT` and `Administrator`. Any administrator may **view** the permmissions page in the AdminCP, but you need to log in as ROOTMAN to make any changes.</p>
+
+<p>Permissions in XE are used to work out when an admin can login to the system (connected with System Modes), and which sections of the AdminCP they can see. Take a look at `/admin/pages/dologin`, `/admin/modules/admin_nav_panel.php` and the top of most other `/pages/[pagename]/page.php` files to understand its usage.</p>
+
 <h2>Latest development docs</h2>
-For the latest version of our development help document, visit our <a href="https://github.com/GreenYoshi/xiinengine-legacy" target="_blank">GitHub Page</a>
+<p>For the latest version of our development help document, visit our <a href="https://github.com/GreenYoshi/xiinengine-legacy" target="_blank">GitHub Page</a></p>

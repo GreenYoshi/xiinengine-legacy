@@ -53,8 +53,8 @@ Development Basics
 
 XiinEngine has 3 primary system modes, designed to close the site at various levels depending on what is necessary:
 
-*  Normal - Run the website as normal. Pretty self explanatory
-*  Debug Mode - Run the website as normal, but make is visual that work is actively being done on the code
+*  Normal - Run the website as normal. Pretty self explanatory - ROOT account is disabled
+*  Debug Mode - Run the website as normal, but make is visual that work is actively being done on the code - ROOT account is disabled
 *  Maintenance Mode - This will lock out all staff from the AdminCP apart from top level Administrators and the ROOT account
 
 The variables for these are currently hard-coded into the index.php file for both the public and admin sites. Try `sysDebugMode` and `sysMaintenanceMode` to understand the behaviour.
@@ -97,3 +97,9 @@ The 2 core files to make a page work are `class.php` and `page.php`. Similar to 
 **Working with the Public Promotions Boxes and Sidebar**
 
 The promotions boxes and sidebar are currently operated manually. If you wish to show data in these boxes which come from the database, you should be able to make all your calls via $this->database without having to make a new MySQLi connection, as this has already been established by this stage.
+
+**Working with Permissions**
+
+As a security measure, there are different levels of permissions. The two which come with XE by default are `ROOT` and `Administrator`. Any administrator may **view** the permmissions page in the AdminCP, but you need to log in as ROOTMAN to make any changes.
+
+Permissions in XE are used to work out when an admin can login to the system (connected with System Modes), and which sections of the AdminCP they can see. Take a look at `/admin/pages/dologin`, `/admin/modules/admin_nav_panel.php` and the top of most other `/pages/[pagename]/page.php` files to understand its usage.
